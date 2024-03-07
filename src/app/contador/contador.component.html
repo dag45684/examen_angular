@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <button routerLink="/">Menu principal</button>
+    <button routerLink="/contador">Contador</button>
+    <button routerLink="/saludo">Saludo</button>
+</mat-toolbar>
+
+<div class="main">
+    <div class="botones">
+        <div class="pausa">
+            <button (click)="pause()">PAUSE</button>
+        </div>
+        <div class="otros">
+            <button (click)="play()">PLAY</button>
+            <button (click)="record()">RECORD</button>
+        </div>
+    </div>
+    <div class="aaa">
+        <div class="lapsos" *ngFor="let n of nums">
+            <app-lapsos [interact]="curr_time"></app-lapsos>
+        </div>
+
+    </div>
+</div>
